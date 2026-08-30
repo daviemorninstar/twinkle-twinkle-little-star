@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Звезда, которой не было</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="stars"></div>
+  <div class="scanlines"></div>
+
+  <main>
+    <section class="screen active" id="screen1">
+      <div class="year">2006</div>
+      <div class="tiny">Где-то очень далеко от нас...</div>
+      <div class="sky">
+        <button class="special-star" id="specialStar" aria-label="Особенная звезда">✦</button>
+      </div>
+      <p class="hint">НАЖМИ НА ЗВЕЗДУ</p>
+    </section>
+
+    <section class="screen" id="screen2">
+      <div class="chapter">ГЛАВА I</div>
+      <h1>Однажды<br>появился свет.</h1>
+      <p>В одну из ночей на небе появилась звезда, которой раньше не было.</p>
+      <p>Никто не заметил её появления.</p>
+      <p>А зря.</p>
+      <p class="emphasis">Потому что двадцать лет спустя стало ясно:<br>это был не просто свет.</p>
+      <button class="next">ПРОДОЛЖИТЬ →</button>
+    </section>
+
+    <section class="screen" id="screen3">
+      <div class="chapter">ГЛАВА II</div>
+      <h1>20 лет.</h1>
+      <p>Двадцать лет назад во Вселенной появился человек, о котором я тогда ещё ничего не знал.</p>
+      <p>Я не знал его имени.<br>Не знал его голоса.<br>Не знал, как он смеётся.</p>
+      <p>И уж точно не знал, что однажды назову его</p>
+      <div class="husband">МОИМ МУЖЕМ.</div>
+      <button class="next">ЕЩЁ →</button>
+    </section>
+
+    <section class="screen" id="screen4">
+      <div class="chapter">ГЛАВА III</div>
+      <h1>20 маленьких<br>звёзд.</h1>
+      <p>Нажми на каждую.</p>
+      <div class="constellation" id="constellation"></div>
+      <div class="counter"><span id="found">0</span> / 20</div>
+      <button class="next hidden" id="finalButton">ПОСЛЕДНЯЯ ЗВЕЗДА →</button>
+    </section>
+
+    <section class="screen final-screen" id="screen5">
+      <div class="big-star">✦</div>
+      <div class="chapter">ГЛАВА IV</div>
+      <h1>С днём рождения,<br>любовь моя.</h1>
+      <p>Если бы мне пришлось выбирать одну звезду среди всех существующих, я бы всё равно выбрал тебя.</p>
+      <p>Спасибо за каждый день, каждую ночь, каждый разговор и за то, что именно ты — ты.</p>
+      <p class="emphasis">Я люблю тебя.</p>
+      <div class="signature">— твой человек ♡</div>
+      <button class="restart" onclick="location.reload()">НАЧАТЬ СНАЧАЛА</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
