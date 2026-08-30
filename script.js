@@ -42,30 +42,41 @@ document.getElementById('begin').onclick=()=>{
   setTimeout(()=>fade.style.opacity=0,1050);
 };
 
-const specialStar = document.getElementById('specialStar');
 let specialStarUsed = false;
 
-function openStory() {
+function openStory(event) {
+  if (event) event.preventDefault();
   if (specialStarUsed) return;
   specialStarUsed = true;
-  const fade = document.getElementById('fade');
-  fade.style.opacity = '.55';
 
-  setTimeout(() => show(2), 500);
-  setTimeout(() => {
+  const fade = document.getElementById('fade');
+  fade.style.opacity = '0.65';
+
+  setTimeout(function () {
+    show(2);
+  }, 550);
+
+  setTimeout(function () {
     fade.style.opacity = '0';
-  }, 700);
+  }, 800);
 }
 
-specialStar.addEventListener('pointerdown', (event) => {
-  event.preventDefault();
-  openStory();
-}, { passive: false });
+const specialStar = document.getElementById('specialStar');
+const starSky = document.querySelector('#screen2 .sky');
 
-specialStar.addEventListener('click', (event) => {
-  event.preventDefault();
-  openStory();
-});
+if (specialStar) {
+  specialStar.onclick = openStory;
+  specialStar.ontouchend = openStory;
+}
+
+if (starSky) {
+  starSky.onclick = function(event) {
+    if (event.target !== specialStar) openStory(event);
+  };
+  starSky.ontouchend = function(event) {
+    if (event.target !== specialStar) openStory(event);
+  };
+}
 
 document.querySelectorAll('.next').forEach(b=>{
   b.addEventListener('click',()=>{
