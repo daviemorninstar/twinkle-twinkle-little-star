@@ -1,69 +1,95 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Звезда, которой не было</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Для Юры — одна особенная звезда</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="stars"></div>
-  <div class="scanlines"></div>
+<div id="stars"></div>
+<div class="scanlines"></div>
+<div id="flash"></div>
 
-  <main>
-    <section class="screen active" id="screen1">
-      <div class="year">2006</div>
-      <div class="tiny">Где-то очень далеко от нас...</div>
-      <div class="sky">
-        <button class="special-star" id="specialStar" aria-label="Особенная звезда">✦</button>
-      </div>
-      <p class="hint">НАЖМИ НА ЗВЕЗДУ</p>
-    </section>
+<main>
+<section class="screen active" id="s1">
+  <div class="year">2006</div>
+  <div class="subtitle">30 АВГУСТА · ГДЕ-ТО ОЧЕНЬ ДАЛЕКО</div>
+  <div class="sky"><button class="special-star" id="birthStar">✦</button></div>
+  <div class="hint">НАЖМИ НА ЗВЕЗДУ</div>
+</section>
 
-    <section class="screen" id="screen2">
-      <div class="chapter">ГЛАВА I</div>
-      <h1>Однажды<br>появился свет.</h1>
-      <p>В одну из ночей на небе появилась звезда, которой раньше не было.</p>
-      <p>Никто не заметил её появления.</p>
-      <p>А зря.</p>
-      <p class="emphasis">Потому что двадцать лет спустя стало ясно:<br>это был не просто свет.</p>
-      <button class="next">ПРОДОЛЖИТЬ →</button>
-    </section>
+<section class="screen" id="s2">
+  <div class="chapter">ПРОЛОГ</div>
+  <h1>В этот день<br>появился ты.</h1>
+  <p>Где-то в огромной и совершенно безразличной Вселенной произошло событие, которое тогда никто не счёл историческим.</p>
+  <p>Родился Юра.</p>
+  <p class="soft">И я ещё не знал, что однажды этот человек станет для меня самым важным.</p>
+  <button class="next">ДАЛЬШЕ →</button>
+</section>
 
-    <section class="screen" id="screen3">
-      <div class="chapter">ГЛАВА II</div>
-      <h1>20 лет.</h1>
-      <p>Двадцать лет назад во Вселенной появился человек, о котором я тогда ещё ничего не знал.</p>
-      <p>Я не знал его имени.<br>Не знал его голоса.<br>Не знал, как он смеётся.</p>
-      <p>И уж точно не знал, что однажды назову его</p>
-      <div class="husband">МОИМ МУЖЕМ.</div>
-      <button class="next">ЕЩЁ →</button>
-    </section>
+<section class="screen" id="s3">
+  <div class="chapter">ГЛАВА I · НАЧАЛО</div>
+  <h1>Самое смешное<br>начало.</h1>
+  <p>Мы познакомились совершенно глупо.</p>
+  <p>В интернете. Как ролевики.</p>
+  <p>Если бы мне тогда сказали, что из этого выйдет что-то настоящее, я бы, наверное, рассмеялся.</p>
+  <p class="emphasis">А теперь прошло около двух месяцев, и ты — мой серьёзный мужчина.</p>
+  <button class="next">ДАЛЬШЕ →</button>
+</section>
 
-    <section class="screen" id="screen4">
-      <div class="chapter">ГЛАВА III</div>
-      <h1>20 маленьких<br>звёзд.</h1>
-      <p>Нажми на каждую.</p>
-      <div class="constellation" id="constellation"></div>
-      <div class="counter"><span id="found">0</span> / 20</div>
-      <button class="next hidden" id="finalButton">ПОСЛЕДНЯЯ ЗВЕЗДА →</button>
-    </section>
+<section class="screen" id="s4">
+  <div class="chapter">ГЛАВА II · ТЫ</div>
+  <h1>Я собирал тебя<br>по маленьким вещам.</h1>
+  <p>По твоему дурацкому чувству юмора.</p>
+  <p>По тому, как ты смущаешься.</p>
+  <p>По твоей закрытости, за которой всё равно каким-то образом остаётся удивительная искренность.</p>
+  <p>По чёрному чаю с молоком и огурцам.</p>
+  <button class="next">ДАЛЬШЕ →</button>
+</section>
 
-    <section class="screen final-screen" id="screen5">
-      <div class="big-star">✦</div>
-      <div class="chapter">ГЛАВА IV</div>
-      <h1>С днём рождения,<br>любовь моя.</h1>
-      <p>Если бы мне пришлось выбирать одну звезду среди всех существующих, я бы всё равно выбрал тебя.</p>
-      <p>Спасибо за каждый день, каждую ночь, каждый разговор и за то, что именно ты — ты.</p>
-      <p class="emphasis">Я люблю тебя.</p>
-      <div class="signature">— твой человек ♡</div>
-      <button class="restart" onclick="location.reload()">НАЧАТЬ СНАЧАЛА</button>
-    </section>
-  </main>
+<section class="screen" id="s5">
+  <div class="chapter">ГЛАВА III · 20 ЗВЁЗД</div>
+  <h1>Двадцать причин.</h1>
+  <p>Не потому, что их ровно двадцать.<br>Просто сегодня тебе двадцать.</p>
+  <p class="soft">Нажми на звёзды. Некоторые вещи я хочу сказать тебе отдельно.</p>
+  <div class="constellation" id="constellation"></div>
+  <div class="counter"><span id="found">0</span> / 20</div>
+  <button class="next hidden" id="finalButton">ИДТИ ДАЛЬШЕ →</button>
+</section>
 
-  <script src="script.js"></script>
+<section class="screen" id="s6">
+  <div class="chapter">ГЛАВА IV · ПОСЛЕДНЕЕ</div>
+  <h1>И всё-таки<br>это не причины.</h1>
+  <p>Потому что я мог бы перечислять их всю ночь.</p>
+  <p>Твоё упрямство. Твою целеустремлённость. То, как ты учишь немецкий, хотя мог бы выбрать путь попроще.</p>
+  <p>То, что ты учишься на медика. То, что тебе нравятся ледоколы — даже если я считаю это немного глупеньким.</p>
+  <p>То, что ты не любишь насилие.</p>
+  <p>То, что ты смешной.</p>
+  <p>Но дело не в этом.</p>
+  <button class="next">ПОСЛЕДНЯЯ СТРАНИЦА →</button>
+</section>
+
+<section class="screen final" id="s7">
+  <div class="final-star">✦</div>
+  <div class="chapter">ПОСЛЕСЛОВИЕ</div>
+  <h1>Юра.</h1>
+  <p>Два месяца — совсем немного, если измерять любовь календарём.</p>
+  <p>Но мне кажется странным мерить этим то, что стало таким большим.</p>
+  <p>Ты вошёл в мою жизнь нелепо, почти случайно, через экран и игру. А потом каким-то образом перестал быть просто человеком по ту сторону экрана.</p>
+  <p>Ты стал моим человеком.</p>
+  <p class="final-text">Моим серьёзным мужчиной.</p>
+  <p>И если когда-нибудь ты спросишь меня, почему я выбрал именно тебя, я не смогу назвать одну причину.</p>
+  <p>Потому что я люблю не отдельные вещи в тебе.</p>
+  <p>Я люблю то, как всё это складывается в тебя.</p>
+  <p class="big-love">С днём рождения.<br>Я люблю тебя.</p>
+  <div class="signature">— твой человек ♡</div>
+</section>
+</main>
+<audio id="bgMusic" src="music.mp3" preload="auto"></audio>
+<script src="script.js"></script>
 </body>
 </html>
